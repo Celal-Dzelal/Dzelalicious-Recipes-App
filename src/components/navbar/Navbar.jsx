@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Hamburger, Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
+import { FaHamburger } from "react-icons/fa";
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
   return (
-    <div>Navbar</div>
-  )
-}
+    <Nav>
+      <Logo to="/home" onClick={() => setOpen(false)}>
+        Dzelalicious
+        <span>Recipes</span>
+      </Logo>
+      <Hamburger onClick={() => setOpen(!open)}>
+        <FaHamburger />
+      </Hamburger>
+      <Menu open={open} onClick={() => setOpen(false)}>
+        <MenuLink to="/about">About</MenuLink>
+        <a href="https://github.com/Celal-Dzelal">Github</a>
+        <MenuLink to="/">Logout</MenuLink>
+      </Menu>
+    </Nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
