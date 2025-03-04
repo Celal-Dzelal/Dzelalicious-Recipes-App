@@ -10,29 +10,28 @@ export const Nav = styled.div`
   align-items: center; // dikeyde ortala
   flex-wrap: wrap;
   /* Varsayılan olarak esnek öğeler tek bir satıra sığmaya çalışırlar. Gerektiğinde birden fazla satıra yaymak için bu özelliği kullanabilirsiniz */
-  background: salmon;
+  background: #5f7479;
   border-radius: 0 0 10px 10px;
-  height: 75px;
+  height: 77px;
   font-size: 2rem;
   /* background: #e1f1dd; */
 `;
 
 export const MenuLink = styled(Link)`
   /* navbardaki 3 kelime ... tek tek about vs yazanların özellikleri YEŞİL*/
-  background-color: green;
+  background-color: #0a5959;
 
-  padding: 1rem 2rem;
+  /* padding: 0 2rem; */
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  /* kelimelerin altı çizili olmasın */
-  color: #02475e;
+  color: #ffffff;
 
   transition: all 0.3s ease-in;
   font-size: 2rem;
   font-family: "Girassol", sans-serif;
   &:hover {
-    color: #00adb5;
+    color: #ffffff;
     font-weight: bold;
   }
   @media (max-width: 768px) {
@@ -46,6 +45,7 @@ export const MenuLink = styled(Link)`
 export const Menu = styled.div`
   /* navbardaki 3 kelime about ...hepsini içine alan sarmalın (kutunun ) özellikleri*/
   background: #e1f1dd;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,7 @@ export const Menu = styled.div`
     text-align: center;
     text-decoration: none;
     /* kelimelerin altı çizili olmasın */
-    color: #02475e;
+    color: #d64409;
 
     transition: all 0.3s ease-in;
     font-size: 2rem;
@@ -79,26 +79,27 @@ export const Menu = styled.div`
     @media (max-width: 768px) {
       /* hamburger meydana çıktığında 
     /* ekran küçülünce alttaki stiller olsun */
-      border: 1px solid #00adb5;
+      /* border: 1px solid #00adb5; */
       border-radius: 10px;
       width: 91%;
     }
   }
 `;
 export const Logo = styled(MenuLink)`
-  background-color: gray;
-
-  padding: 1rem 0;
-  color: #393e46;
-  /* text-decoration: none; */
+  background-color: #0a5959;
+  border-radius: 10px;
+  height: 50%;
+  padding: 0.1rem 1rem 0.5rem 1rem;
+  color: #ffffff;
   font-weight: 800;
-  /* font-size: 2rem; */
 
   span {
-    /* font-family: "Girassol", sans-serif; */
     font-weight: 400;
-    /* font-size: 2rem; */
-    color: #00adb5;
+    color: #d64409;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem 0;
   }
 `;
 
