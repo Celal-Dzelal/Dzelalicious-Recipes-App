@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LoginContainer = styled.div`
   /* resmin olduğu div */
-  background-image: url("https://picsum.photos/1600/900");
+  /* background-image: url("https://picsum.photos/1600/900"); */
   background-repeat: no-repeat;
   height: 100vh;
   background-size: cover;
@@ -58,8 +58,7 @@ export const StyledForm = styled.form`
 `;
 
 export const StyledButton = styled.button`
-
-/* login butonu */
+  /* login butonu */
   font-size: 2rem;
   font-family: "Girassol", sans-serif;
   background-color: rgba(0, 0, 0, 0.6);
