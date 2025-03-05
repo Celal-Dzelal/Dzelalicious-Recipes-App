@@ -6,7 +6,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
     <Nav>
-      <Logo to="/home" onClick={() => setOpen(false)}>
+      <Logo>
         Dzelalicious
         <span>Recipes</span>
       </Logo>

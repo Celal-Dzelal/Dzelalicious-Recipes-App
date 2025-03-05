@@ -18,9 +18,10 @@ export const FormContainer = styled.div`
   /* width: 600px; */
   min-width: 600px;
   height: 600px;
-  background-color: rgba(0, 173, 181, 0.5);
+  background-color: rgba(10, 89, 89, 0.5);
   border-radius: 50%;
-  border: 2px solid #e1f1dd;
+  border: 2px solid #d64409;
+  box-shadow: 10px 10px 10px black;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -40,11 +41,12 @@ export const StyledInput = styled.input`
   height: 50px;
   font-size: 2rem;
   width: 250px;
-  border-radius: 5px;
+  border-radius: 20px;
   font-family: "Girassol", sans-serif;
   /* inuta girilen yazıyı büyük harf yapar */
   background-color: rgba(0, 0, 0, 0.6);
   border: none;
+
   color: white;
   margin: 1rem;
   text-indent: 20px;
@@ -52,7 +54,8 @@ export const StyledInput = styled.input`
 
 export const StyledForm = styled.form`
   /* 3 kutunun olduğu form */
-  background: pink;
+  background: #b6bfbe;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
 `;
@@ -62,6 +65,7 @@ export const StyledButton = styled.button`
   font-size: 2rem;
   font-family: "Girassol", sans-serif;
   background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
   color: white;
   border: none;
   cursor: pointer;

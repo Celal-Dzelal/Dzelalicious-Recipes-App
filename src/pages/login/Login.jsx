@@ -12,6 +12,14 @@ import mealSvg from "../../assets/meal.svg";
 import { RecipeContext } from "../../context/RecipeProvider";
 import { useNavigate } from "react-router-dom";
 const Login = () => {
+  const { setUser, setPass, user, pass } = useContext(RecipeContext);
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem("username", user);
+    localStorage.setItem("password", pass);
+    navigate("/home");
+  };
   return (
     <LoginContainer>
       <FormContainer>
@@ -19,10 +27,20 @@ const Login = () => {
 
         <Header>Dzelalicious Recipes</Header>
 
-        <StyledForm>
-          <StyledInput type="text" placeholder="username" required />
+        <StyledForm onSubmit={handleSubmit}>
+          <StyledInput
+            type="text"
+            placeholder="username"
+            required
+            onChange={(e) => setUser(e.target.value)}
+          />
 
-          <StyledInput type="password" placeholder="password" required />
+          <StyledInput
+            type="password"
+            placeholder="password"
+            required
+            onChange={(e) => setPass(e.target.value)}
+          />
 
           <StyledButton type="submit">Login</StyledButton>
         </StyledForm>

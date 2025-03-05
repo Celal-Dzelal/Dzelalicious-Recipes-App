@@ -25,12 +25,12 @@ const About = () => {
 
         <HeaderContainer>
           <h1>
-            About Software Developer <span>Dzelal Zmajevic </span>
+            About Software Developer <span>Dzelal Sokolović </span>
           </h1>
         </HeaderContainer>
 
         <InfoContainer>
-          <h2>Hi, I'am Dzelal Zmajevic</h2>
+          <h2>Hi, I'am Dzelal Sokolović</h2>
           <h3>I’m currently learning Full-Stack Development Languages.</h3>
           <h4>I've already known JS, ReactJS, Python, Redux.</h4>
           {/* <h2>

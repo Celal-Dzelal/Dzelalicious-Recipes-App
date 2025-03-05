@@ -14,19 +14,16 @@ const NotFound = () => {
   }, []);
 
   if (sayac === 0) {
-    return <Navigate to="/home" />;
+    return <Navigate to="/" />;
   }
 
-
-
-  
   return (
     <Main>
       <div>
         <h3>Something went Wrong</h3>
         <p>
           Within <strong>{sayac}</strong> seconds, you will be redirected to the
-          home page!
+          login page!
         </p>
       </div>
     </Main>
