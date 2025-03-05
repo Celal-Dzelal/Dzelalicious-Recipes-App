@@ -9,10 +9,11 @@ export const AboutContainer = styled.div`
   align-items: center;
   min-height: calc(100vh - 80px);
   height: calc(100% - 100px);
+  color: #f9fafc;
   /*  Ekran yüksekliğiniz mesela 1000 piksel ise, öğenizin yüksekliği 900 piksele  eşit olacaktır.(1000 pikselin %100'ü ve eksi 100 piksel) */
   line-height: 2;
   span {
-    color: orange;
+    color: #d64409;
     font-family: "Girassol", sans-serif;
     font-size: 3rem;
   }
@@ -23,17 +24,25 @@ export const StyledImage = styled.img`
 `;
 
 export const HeaderContainer = styled.div`
-  background-color: white;
+  background-color: #0a5959;
+  padding: 0 3rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  border: 2px solid #d64409;
+  box-shadow: 10px 10px 10px black;
 `;
 
 export const InfoContainer = styled.div`
   text-align: right;
-  margin: 0 10px;
+  margin: 0 10px 10px 10px;
   max-width: 1000px;
-  border: 1px solid white;
+  border: 2px solid #d64409;
   padding: 25px;
-  border-radius: 5px;
-  a {
+  border-radius: 20px;
+  background-color: #0a5959;
+  text-align: center;
+  box-shadow: 10px 10px 10px black;
+  /* a {
     color: orange;
-  }
+  } */
 `;
