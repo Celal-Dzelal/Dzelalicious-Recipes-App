@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import {
   FormContainer,
   Header,
@@ -9,16 +9,15 @@ import {
   StyledInput,
 } from "./LoginStyles";
 import mealSvg from "../../assets/meal.svg";
-import { RecipeContext } from "../../context/RecipeProvider";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom/dist";
+import { AuthContextArea } from "../../context/AuthContext";
 const Login = () => {
-  const { setUser, setPass, user, pass } = useContext(RecipeContext);
-  const navigate = useNavigate();
+  const { loginUser } = useContext(AuthContextArea);
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("username", user);
-    localStorage.setItem("password", pass);
-    navigate("/home");
+    loginUser(email, password);
   };
   return (
     <LoginContainer>
@@ -29,21 +28,22 @@ const Login = () => {
 
         <StyledForm onSubmit={handleSubmit}>
           <StyledInput
-            type="text"
-            placeholder="username"
+            type="email"
+            placeholder="email"
             required
-            onChange={(e) => setUser(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
 
           <StyledInput
             type="password"
             placeholder="password"
             required
-            onChange={(e) => setPass(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
           />
 
           <StyledButton type="submit">Login</StyledButton>
         </StyledForm>
+        <Link to="/register">Not registered? Sign up.</Link>
       </FormContainer>
     </LoginContainer>
   );

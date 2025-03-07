@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Hamburger, Logo, Menu, MenuLink, Nav } from "./NavbarStyles";
 import { FaHamburger } from "react-icons/fa";
+import { AuthContextArea } from "../../context/AuthContext";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { logOut } = useContext(AuthContextArea);
   return (
     <Nav>
-      <Logo>
+      <Logo to="/home" onClick={() => setOpen(false)}>
         Dzelalicious
         <span>Recipes</span>
       </Logo>
@@ -16,7 +18,7 @@ const Navbar = () => {
       <Menu open={open} onClick={() => setOpen(false)}>
         <MenuLink to="/about">About</MenuLink>
         <a href="https://github.com/Celal-Dzelal">Github</a>
-        <MenuLink to="/">Logout</MenuLink>
+        <MenuLink onClick={() => logOut()}>Logout</MenuLink>
       </Menu>
     </Nav>
   );
