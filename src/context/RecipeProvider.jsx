@@ -16,12 +16,17 @@ const RecipeProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${mealType}`;
+  // Updated API endpoint - use v2 recipes endpoint
+  const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${mealType}`;
 
   const getData = async () => {
     setLoading(true);
+    setError(false);
+
     try {
       const { data } = await axios.get(url);
+
+      // Note: The response structure is different in v2 API
       setFoods(data.hits);
     } catch (error) {
       setError(true);
