@@ -2,10 +2,9 @@
 
 Dzelalicious Recipes App is a web application that allows users to explore recipes for breakfast, lunch, and teatime. The app enables users to list recipes based on their selected meal category and view the details of those recipes, including nutritional information and preparation steps.
 
-# Live Demo
+## Demo
 
-[Visit The App](https://dzelalicious-recipes-app.vercel.app/)
-
+![Demo GIF](./assets/Demo.gif)
 
 ## Features
 
@@ -26,6 +25,7 @@ Dzelalicious Recipes App is a web application that allows users to explore recip
 - **React Icons:** Used for icons within the app.
 
 ### Installation
+
 1. **Clone the repository**
    ```
    git clone https://github.com/yourusername/Dzelalicious-Recipes-App.git
@@ -38,6 +38,7 @@ Dzelalicious Recipes App is a web application that allows users to explore recip
    ```
    pnpm start
    ```
+
 #### Contributing
 
 - If you'd like to contribute to this project, please fork the repository and create a pull request with your changes. Any contributions and feedback are welcome!
